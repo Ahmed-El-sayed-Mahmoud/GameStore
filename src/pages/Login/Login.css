@@ -1,0 +1,89 @@
+body {
+    background-color: black;
+    padding: 3rem 20rem 5rem 24rem;
+}
+
+.LoginPage {
+    border-width: 2px;
+    border-style: solid;
+    border-color: navy;
+    border-radius: 13px;
+    padding: 10rem 10rem 10rem 8rem;
+}
+
+.EnterText {
+
+    margin-bottom: 20px;
+    color: white;
+    width: 13rem;
+
+
+}
+
+.LoginHeader {
+    color: white;
+    margin-left: 4.5rem;
+    margin-bottom: 50px;
+    margin-top: -20px;
+    font-size: 2rem;
+    font-family: 'Electrolize', sans-serif;
+}
+
+.LoginText {
+    border-width: 2px;
+    border-style: solid;
+    border-color: navy;
+    background-color: black;
+    border-radius: 5px;
+    font-style: italic;
+    width: 100%;
+    padding: 5px 20px;
+    color: white;
+    font-family: "Sofia", sans-serif;
+    font-size: medium;
+    margin-left: 2rem;
+}
+
+.LoginAs {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+    font-family: 'Electrolize', sans-serif;
+
+}
+
+.LoginAsRole {
+    margin-bottom: 1rem;
+    border: 1px solid navy;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: navy;
+    color: white;
+    font-family: Sofia;
+    font-size: larger;
+    font-style: italic;
+}
+
+.AsRole {
+    color: white;
+    margin-left: 6.5rem;
+    margin-top: 1rem;
+
+}
+
+.ErrorMessage {
+    color: white;
+    margin-left: 1rem;
+    font-family: Sofia;
+    font-size: larger;
+    font-style: italic;
+}
+
+.Loginlogo {
+    margin-top: -5rem;
+    margin-bottom: 1.5rem;
+    width: 5rem;
+    height: 5rem;
+    margin-left: 5rem;
+}

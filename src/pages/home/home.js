@@ -1,4 +1,4 @@
-import "../home/home.css"
+import "../Home/home.css"
 import Header from "./components/header"
 import Banner from "./components/banner"
 import Slider from "./components/slider"
@@ -31,7 +31,7 @@ const games=[
         price:"99.99"
     }
 ]
-function home() {
+function Home() {
   
   return (
     <>
@@ -43,4 +43,4 @@ function home() {
   );
 }
 
-export default home;
+export default Home;
