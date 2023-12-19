@@ -1,0 +1,124 @@
+    /* start header  ********************************/
+header{
+    box-shadow: 0 1px 5px 0px #b9b5b5;
+    position: relative;
+    background-color: #19191d;
+    color: white;
+}
+header .container .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -13px 0;
+    
+}
+@media (max-width:767px) {
+    header .container .logo{
+        width: 100%;
+    }
+    
+}
+
+header .container .logo img{
+    height: 90px;
+    
+}
+
+header nav{
+    width: 50%;
+}
+header  ul{
+    display: flex;
+    justify-content: space-around;
+
+}
+header .container .megamenue{
+    position: absolute;
+    display: flex;
+    background-color: #19191d;
+    z-index: 5;
+    justify-content: space-around;
+    align-items: center;
+    top: 200%;
+    right: 0;
+    opacity: 0;
+    z-index: -5;
+    transition: .3s;
+}
+header  .container .other:hover .megamenue{
+    opacity: 1;
+    z-index: 5;
+    top: 110%;
+}
+header .container .megamenue ul{
+    display: block;
+}
+header .container .megamenue img{
+    height: 200px;
+}
+@media (max-width:767px) {
+
+    header .container .megamenue img{
+        display: none;
+    }
+    header .container .megamenue{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        
+    }
+   
+    header .container .megamenue ul
+    {
+        width: 100%;
+    }
+}
+header .container .megamenue svg{
+    margin-right: 10px;
+    height: 19px;
+    width: 30px;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header .container ul li {
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+    color:  #bdbcbc;
+    font-size: 19px;
+    white-space: nowrap;
+    display: flex;
+}
+header .container ul li::before{
+content: "";
+position: absolute;
+height: 3px;
+width: 0%;
+top: 0;
+left: 0;
+background-color: rgb(233, 233, 233);
+transition: .4s;
+}
+header .container ul li:hover::before{
+    width: 100%;
+    
+}
+header .container ul li:hover{
+    color: white;
+}
+@media (max-width:767px) {
+    header .container ul li{
+        padding: 8px;
+        font-size: 15px;
+        margin: 5px;
+    }
+    header nav{
+        margin-top: 5px;
+    }
+}

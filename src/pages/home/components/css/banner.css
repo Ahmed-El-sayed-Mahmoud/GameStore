@@ -1,0 +1,63 @@
+.offer{
+    background-image:linear-gradient( to left top, #313131 33%, rgb(128 128 128 / 40%) 20%, rgb(98 98 98 / 40%) 100% );
+    padding-bottom: 15px;
+    color: white;
+    
+}
+
+.offer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-top: 40px;
+    
+}
+
+.offer .container img{
+    height:250px;
+    animation-name: rotation;
+    animation-duration: 6s;
+    animation-direction:normal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    border-radius: 10%;
+}
+.offer .container .img{
+    padding: 0px 8%;
+}
+.offer .container img:hover{
+    animation-play-state: paused;
+}
+.offer .container .text{
+    order: -1;
+    flex: 1;
+}
+.offer .container .text h2{
+    color: black;
+    font-size: 28px;
+    letter-spacing: 3.6px;
+    color: white;
+}
+.offer .container .text .norm{
+    font-size: 25px;
+    letter-spacing: 3.5px;
+    color: white;
+}
+@keyframes rotation {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@media (max-width:767px) {
+    .offer .container img{
+        height: 130px;
+    }
+    .offer .text h2{
+        font-size: 19px !important;
+        letter-spacing: 1.6px !important;
+      }
+}
