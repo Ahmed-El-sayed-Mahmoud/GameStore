@@ -1,4 +1,4 @@
-import "../home/home.css"
+import "../Home/home.css"
 import Header from "./components/header"
 import Banner from "./components/banner"
 import Slider from "./components/slider"
@@ -39,7 +39,7 @@ const games=[
         describtion:" a mercenary in the futuristic Night City. The game, set in a cyberpunk world, features an open world with narrative depth, moral choices, and intense action, offering an immersive experience in a technologically advanced, morally complex future."
     }
 ]
-function home() {
+function Home() {
   
   return (
     <>
@@ -51,4 +51,4 @@ function home() {
   );
 }
 
-export default home;
+export default Home;
