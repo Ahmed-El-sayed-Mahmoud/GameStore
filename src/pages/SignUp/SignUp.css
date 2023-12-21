@@ -1,0 +1,14 @@
+.SaveButton{
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    border: 1px solid navy;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: navy;
+    color: white;
+    font-family: Sofia;
+    font-size: larger;
+    font-style: italic;
+    width: 95%;
+}

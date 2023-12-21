@@ -40,7 +40,7 @@ const games=[
     }
 ]
 function Home() {
-  
+
   return (
     <>
       <Header/>

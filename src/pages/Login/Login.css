@@ -1,8 +1,6 @@
-body {
-    background-color: black;
-}
 
-.LoginPage {
+
+.LoginSignPage {
     border-width: 2px;
     border-style: solid;
     border-color: navy;
@@ -30,7 +28,7 @@ body {
     font-family: 'Electrolize', sans-serif;
 }
 
-.LoginText {
+.LoginSignupText {
     border-width: 2px;
     border-style: solid;
     border-color: navy;
@@ -45,7 +43,7 @@ body {
     margin-left: 2rem;
 }
 
-.LoginAs {
+.LoginSignAs {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -54,7 +52,7 @@ body {
 
 }
 
-.LoginAsRole {
+.LoginSignAsRole {
     margin-bottom: 1rem;
     border: 1px solid navy;
     border-radius: 5px;
@@ -75,10 +73,10 @@ body {
 
 .ErrorMessage {
     color: white;
-    margin-left: 1rem;
     font-family: Sofia;
     font-size: larger;
     font-style: italic;
+    margin-left: 3rem;
 }
 
 .Loginlogo {
