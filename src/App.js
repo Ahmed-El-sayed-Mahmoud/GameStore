@@ -3,15 +3,17 @@ import React from 'react';
 import Login from './pages/Login/Login';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from './pages/home/home.js'
-
+import Home from"../src/pages/Home/home"
+import SignUp from './pages/SignUp/SignUp';
 function App() {
-  
+
   return (
     <BrowserRouter>
       <Routes>
       <Route exact path='/'element={<Home/>}></Route>
         <Route path='/Login'element={<Login/>}>
+        </Route>
+        <Route path='/Signup'element={<SignUp/>}>
         </Route>
       </Routes>
     </BrowserRouter>
