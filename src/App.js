@@ -1,10 +1,9 @@
 import React from 'react';
 
 import Login from './pages/Login/Login';
-import "../src/App.css"
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from './pages/Home/home'
+import Home from './pages/home/home.js'
 
 function App() {
   

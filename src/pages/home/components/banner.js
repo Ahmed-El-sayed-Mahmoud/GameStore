@@ -1,6 +1,9 @@
 import "./css/banner.css"
 import Btn from "../components/btn"
-function banner({header,title,btn_text,btn_exist,img}) {
+function banner({header,title,btn_text,btn_exist,img,game}) {
+  const purchase=(name)=>{
+    console.log(name);
+  }
   return (
     <div className="offer">
         <div className="container">
@@ -10,7 +13,7 @@ function banner({header,title,btn_text,btn_exist,img}) {
             <div className="text">
                 <h2>{header}</h2>
                 <p className="norm">{title}</p>
-                {btn_exist&&<Btn text={btn_text}/>}
+                <button className="buy_now" onClick={()=>purchase(game.Name)}>Buy Now</button>
             </div>
         </div>
     </div>

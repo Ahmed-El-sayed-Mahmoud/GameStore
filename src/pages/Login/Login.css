@@ -1,6 +1,5 @@
 body {
     background-color: black;
-    padding: 3rem 20rem 5rem 24rem;
 }
 
 .LoginPage {
@@ -9,6 +8,7 @@ body {
     border-color: navy;
     border-radius: 13px;
     padding: 10rem 10rem 10rem 8rem;
+    margin: 3rem 20rem 5rem 24rem;
 }
 
 .EnterText {
