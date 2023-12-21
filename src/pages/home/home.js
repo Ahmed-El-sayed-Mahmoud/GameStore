@@ -3,6 +3,7 @@ import Header from "./components/header"
 import Banner from "./components/banner"
 import Slider from "./components/slider"
 import Games_slider from "./components/games_slider"
+import Footer from "./components/Footer"
 const fetch_trend_game=async()=>{
   const response = await fetch("http://localhost:3000/game/");
   const games = await response.json();
@@ -83,7 +84,7 @@ function Home() {
       <Banner header={header} title="What are you waiting for !" img="./media/god_of_war.jpg" game={game} btn_exist={true} btn_text="Purchase Now"/>
       <Slider games={games}/>
       <Games_slider games={games}/>
-    
+      <Footer/>
     </>
   );
 }
