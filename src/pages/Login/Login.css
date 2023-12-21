@@ -9,6 +9,7 @@ body {
     border-radius: 13px;
     padding: 10rem 10rem 10rem 8rem;
     margin: 3rem 20rem 5rem 24rem;
+   
 }
 
 .EnterText {
@@ -22,7 +23,7 @@ body {
 
 .LoginHeader {
     color: white;
-    margin-left: 4.5rem;
+    margin-left: 5rem;
     margin-bottom: 50px;
     margin-top: -20px;
     font-size: 2rem;
@@ -67,8 +68,8 @@ body {
 
 .AsRole {
     color: white;
-    margin-left: 6.5rem;
-    margin-top: 1rem;
+    margin-left: 6.6rem;
+    margin-top: 2rem;
 
 }
 
@@ -85,5 +86,5 @@ body {
     margin-bottom: 1.5rem;
     width: 5rem;
     height: 5rem;
-    margin-left: 5rem;
+    margin-left: 5.5rem;
 }
