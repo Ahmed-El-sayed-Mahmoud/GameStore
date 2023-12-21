@@ -107,7 +107,6 @@ function Slider({games}) {
       }, [goToNext]);
       const slide_style=(slideIndex) => ({
         backgroundImage: `url(${games[slideIndex].url})`,
-        backgroundSize:"cover",
         width: `100%`,
         height:"100%",
         borderRadius: "10px",
