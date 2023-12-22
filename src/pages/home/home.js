@@ -10,7 +10,7 @@ const fetch_trend_game=async()=>{
   return games[0];
   }
  const game= await fetch_trend_game();
- const header=`${game.Name} is now FREE `;
+ const header=`${game?.Name} is now FREE `;
 const games=[
     {
         name:"UNCHARTED",
