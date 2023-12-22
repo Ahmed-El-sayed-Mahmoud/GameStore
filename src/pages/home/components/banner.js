@@ -1,6 +1,6 @@
 import "./css/banner.css"
 import Btn from "../components/btn"
-function banner({header,title,btn_text,btn_exist,img,game}) {
+function Banner({header,title,btn_text,btn_exist,img,game}) {
   const purchase=(name)=>{
     console.log(name);
   }
@@ -20,4 +20,4 @@ function banner({header,title,btn_text,btn_exist,img,game}) {
   )
 }
 
-export default banner
+export default Banner

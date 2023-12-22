@@ -1,7 +1,7 @@
 import "./css/game_card.css"
 import {Rate} from "antd"
 import {ShoppingCartOutlined}from "@ant-design/icons"
-function game_card({game}) {
+function Game_card({game}) {
     const s={
         borderRadius: "10px",
     backgroundSize: "cover",
@@ -38,4 +38,4 @@ function game_card({game}) {
   )
 }
 
-export default game_card
+export default Game_card

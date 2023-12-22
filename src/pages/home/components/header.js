@@ -1,10 +1,13 @@
+import { useNavigate } from "react-router-dom"
 import "./css/header.css"
-function header() {
+function Header() {
+    const navigate=useNavigate()
     function logOut()
     {
      localStorage.removeItem('Role')
      localStorage.removeItem('Email')
      console.log( localStorage.getItem('Role'))
+     navigate('/Login')
     }
   return (
     <header>
@@ -62,4 +65,4 @@ function header() {
   )
 }
 
-export default header
+export default Header

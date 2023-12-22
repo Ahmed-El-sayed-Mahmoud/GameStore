@@ -25,7 +25,7 @@ const responsive = {
     height:"400px",
     backgroundColor:"white"
   }
-function games_slider({games}) {
+function Games_slider({games}) {
   return (
     <div className="slider container">
         <h2 className="slider_title">TOP RATED GAMES</h2>
@@ -41,4 +41,4 @@ function games_slider({games}) {
     
   )
 }
-export default games_slider
+export default Games_slider
