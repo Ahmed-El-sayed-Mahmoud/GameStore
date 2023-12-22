@@ -80,7 +80,7 @@ function Home() {
 
   return (
     <>
-      <Header/>
+      <Header />
       <Banner header={header} title="What are you waiting for !" img="./media/god_of_war.jpg" game={game} btn_exist={true} btn_text="Purchase Now"/>
       <Slider games={games}/>
       <Games_slider games={games}/>
