@@ -81,8 +81,11 @@ function SignUp() {
                     })
                 })
                 if (!player.ok) {
-                    throw new Error(`HTTP error! Status: ${player.status}`);
+                 console.log(`HTTP error! Status: ${player.status}`);
+                    setValid('image to large')
+                    return;
                 }
+
                 const p = await player.json();
                 if (p['iscreated'] !== 'Created')
                     setValid(p['iscreated']);
@@ -120,7 +123,9 @@ function SignUp() {
                     })
                 })
                 if (!creator.ok) {
-                    throw new Error(`HTTP error! Status: ${creator.status}`);
+                    console.log(`HTTP error! Status: ${creator.status}`);
+                    setValid('image is long')
+                    return;
                 }
                 const p = await creator.json();
                 if (p['iscreated'] !== 'Created')
@@ -156,7 +161,8 @@ function SignUp() {
                     })
                 })
                 if (!creator.ok) {
-                    throw new Error(`HTTP error! Status: ${creator.status}`);
+                console.log(`HTTP error! Status: ${creator.status}`);
+               
                 }
                 const p = await creator.json();
                 console.log(p["iscreated"])
