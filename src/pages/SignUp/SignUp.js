@@ -1,13 +1,13 @@
 
 import { useState, useRef } from "react"
+import ImageUploader from "../../Componenet/Image/image"
 import "./SignUp.css"
 import { useNavigate } from "react-router-dom"
 function SignUp() {
     const [valid, setValid] = useState('True')
     const [isPlayer, setIsPlayer] = useState(false)
     const [isCreator, setIsCreator] = useState(false)
-    const [ImageBase, setImage] = useState('')
-
+    const [image64, setimage64] = useState(null)
     const Email = useRef();
     const Password = useRef();
     const Fname = useRef();
@@ -25,26 +25,6 @@ function SignUp() {
         setIsPlayer(true)
         setIsCreator(false)
     }
-
-    ////////////////////////////
-    const convertToBase64 = () => {
-        return new Promise((resolve, reject) => {
-          const fileReader = new FileReader();
-          fileReader.readAsDataURL(Image.current.files[0]);
-          fileReader.onload = () => {
-            resolve(fileReader.result);
-          };
-          fileReader.onerror = (error) => {
-            reject(error);
-          };
-        });
-      };
-      const handleFileUpload = async () => {
-       
-        const base64 = await convertToBase64();
-        setImage(base64);
-      };
-    
     ////////////////////////////////
     function EmailValid() {
         const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -69,15 +49,21 @@ function SignUp() {
         }
         return false;
     }
+    ////////////////////////////////////////////
+     //////////////////////////////////////////////////
+    
     const playerSignUp = async () => {
         if (validation()) {
             if (Bdate.current.value === "") {
                 setValid('Must enter  your Birth date');
                 return;
             }
-            handleFileUpload();
-       console.log(ImageBase)
-           
+            if(image64===null)
+            { setValid('Insert image')
+            return;    
+            }
+            console.log(image64)
+
 
             try {
                 const player = await fetch('http://localhost:3000/player/SignUp', {
@@ -91,7 +77,7 @@ function SignUp() {
                         Email: Email.current.value,
                         Password: Password.current.value,
                         Bdate: Bdate.current.value,
-                        Image:  ImageBase,
+                        Image: image64,
                     })
                 })
                 if (!player.ok) {
@@ -111,13 +97,13 @@ function SignUp() {
         }
 
     }
-    //////////////////////////////////////////////////
     const CreatorSignUp = async () => {
         if (validation()) {
-
-            handleFileUpload();
-       console.log(ImageBase)
-
+            if(image64===null)
+            { setValid('Insert image')
+            return;    
+            }
+            console.log(image64)
             try {
                 const creator = await fetch('http://localhost:3000/creator/SignUp', {
                     method: 'POST',
@@ -130,19 +116,16 @@ function SignUp() {
                         Email: Email.current.value,
                         Password: Password.current.value,
                         Description: Description.current.value,
-                        Image: ImageBase,
-
+                        Image: image64,
                     })
                 })
                 if (!creator.ok) {
                     throw new Error(`HTTP error! Status: ${creator.status}`);
                 }
                 const p = await creator.json();
-                console.log(p["iscreated"])
                 if (p['iscreated'] !== 'Created')
                     setValid(p['iscreated']);
                 else {
-
                     navigate('/Login')
                 }
             }
@@ -155,9 +138,9 @@ function SignUp() {
     }
     ////////////////////////////////////////////////
     const AdminSignUp = async () => {
+        
         if (validation()) {
-
-
+    
             try {
                 const creator = await fetch('http://localhost:3000/admin/SignUp', {
                     method: 'POST',
@@ -198,7 +181,9 @@ function SignUp() {
             <div>
                 <img src="./media/logo.png" className="Loginlogo" />
             </div>
-            <h1 className="LoginHeader">SIGNUP</h1>
+            {localStorage.getItem('Role') === 'Admin' ? <h1 className="LoginHeader">Create Admin</h1> :
+
+                <h1 className="LoginHeader">SIGNUP</h1>}
             <div >
                 <div className="EnterText">
                     <input type="text" placeholder="Enter First Name" ref={Fname} className="LoginSignupText" maxLength={20} pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Please enter on alphabets only. ')" required />
@@ -215,10 +200,7 @@ function SignUp() {
                 {localStorage.getItem('Role') === 'Admin' ? <button className="SaveButton" onClick={AdminSignUp} >Save</button>
                     :
                     <div>
-                        <div className="EnterText">
-                            <input type="file" className="LoginSignupText" ref={Image}  required />
-                        </div>
-
+                        <ImageUploader setvalid={setValid} setimage={setimage64} />
                         {isPlayer ?
                             <div>
                                 <div className="EnterText">
