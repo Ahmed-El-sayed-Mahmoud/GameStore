@@ -206,7 +206,7 @@ function SignUp() {
                 {localStorage.getItem('Role') === 'Admin' ? <button className="SaveButton" onClick={AdminSignUp} >Save</button>
                     :
                     <div>
-                        <ImageUploader setvalid={setValid} setimage={setimage64} />
+                        <ImageUploader setvalid={setValid} setimage={setimage64} classN='LoginSignupText' divClass='EnterText' />
                         {isPlayer ?
                             <div>
                                 <div className="EnterText">

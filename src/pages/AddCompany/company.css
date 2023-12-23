@@ -1,0 +1,67 @@
+.AdCompanyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8rem;
+    font-style: italic;
+    justify-content: center;
+
+}
+
+.AdCompany {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.AdCompanyText {
+    width: 20rem;
+    margin-bottom: 1rem;
+    font-family: "Yuji Mai", sans-serif;
+    font-size: 1rem;
+    font-style: italic;
+
+}
+
+.AdCompanyImage {
+    width: 20rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding-top: .5rem;
+}
+
+.ButtonContAd {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.AdCompanySave {
+    width: 9rem;
+    border-radius: 2rem;
+    font-family: "Yuji Mai", sans-serif;
+    font-size: 1.7rem;
+    background-color: white;
+    border-color: white;
+    margin-top: 1rem;
+
+}
+
+.AdCompanySave:hover {
+    background-color: black;
+    border: 1px;
+    border-style: solid;
+    border-color: white;
+    color: white;
+}
+
+.ErrorMessageAD {
+    color: white;
+    text-align: center;
+    font-family: "Yuji Mai", sans-serif;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}

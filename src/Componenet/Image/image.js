@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ImageUploader = ({ setvalid, setimage }) => {
+const ImageUploader = ({ setvalid, setimage ,classN,divClass}) => {
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
@@ -21,8 +21,8 @@ const ImageUploader = ({ setvalid, setimage }) => {
       
     }
     return (
-        <div className="EnterText">
-            <input type="file" accept="image/*" className="LoginSignupText" onChange={handleImageChange} />
+        <div className={divClass}>
+            <input type="file" accept="image/*" className={classN} onChange={handleImageChange} />
         </div>
     );
 };

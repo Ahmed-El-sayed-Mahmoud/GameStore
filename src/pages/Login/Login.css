@@ -15,6 +15,7 @@
     margin-bottom: 20px;
     color: white;
     width: 13rem;
+    text-align: center;
 
 
 }
@@ -38,7 +39,7 @@
     width: 100%;
     padding: 5px 20px;
     color: white;
-    font-family: "Sofia", sans-serif;
+    font-family: "Yuji Mai", sans-serif;
     font-size: medium;
     margin-left: 2rem;
 }
@@ -76,7 +77,9 @@
     font-family: Sofia;
     font-size: larger;
     font-style: italic;
-    margin-left: 3rem;
+    margin-left: 3rem;   
+     font-family: "Yuji Mai", sans-serif;
+
 }
 
 .Loginlogo {
