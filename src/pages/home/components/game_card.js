@@ -1,7 +1,13 @@
 import "./css/game_card.css"
+import { useState , useEffect} from "react"
 import {Rate} from "antd"
 import {ShoppingCartOutlined}from "@ant-design/icons"
+<<<<<<< Updated upstream
 function Game_card({game}) {
+=======
+import Msg from"../components/CoolPopup"
+function Game_card({game,role}) {
+>>>>>>> Stashed changes
     const s={
         borderRadius: "10px",
     backgroundSize: "cover",
@@ -10,12 +16,24 @@ function Game_card({game}) {
     width:"100%",
     height:"310px"
     }
-    const purchase=(name)=>{
-        console.log(name);
+    let[show_msg,set_show]=useState(false);
+  useEffect(() => {
+    let timeoutId;
+    if (show_msg) {
+      timeoutId = setTimeout(() => {
+        set_show(false);
+      }, 3500);
     }
+    return () => clearTimeout(timeoutId);
+  }, [show_msg]);
+  const purchase=(name)=>{
+    if(role!="Player")
+      console.log(name);
+    else
+      set_show(true);
+  }
   return (
     <div className="game_card">
-        
         <div className="img" style={s}>
         <div className="overlay_card">
         <svg xmlns="http://www.w3.org/2000/svg" onClick={()=>purchase(game.name)} height="20" width="20" viewBox="0 0 576 512"><path fill="#ffffff" d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
@@ -32,7 +50,7 @@ function Game_card({game}) {
                 <s>{game.price - 50}$</s>
                 <p>{game.price}$</p>
             </div>
-            
+            {show_msg&&<Msg message={`You can not purchase this game as ${role}`}/>}
         </div>
     </div>
   )
