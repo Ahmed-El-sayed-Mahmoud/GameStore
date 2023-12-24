@@ -8,7 +8,7 @@
     padding: 10px 30px;
     position: absolute;
     width: 100%;
-    bottom: -150px;  
+    bottom: -180px;  
     transition: .5s;
 }
 .slider .slide:hover .overlay{
@@ -20,7 +20,7 @@ bottom: 0px;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 80%;
-    height: 15px;
+    height: 30px;
 }
 .buy_save{
     display: flex;
@@ -60,4 +60,8 @@ bottom: 0px;
 .buy_now:hover
 {
     background-color: red;
+}
+.slide  .game_name{
+    letter-spacing: 2.5px;
+    font-size: 40px;
 }

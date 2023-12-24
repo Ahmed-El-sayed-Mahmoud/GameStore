@@ -1,10 +1,5 @@
 import "./css/banner.css"
-<<<<<<< Updated upstream
-import Btn from "../components/btn"
-function Banner({header,title,btn_text,btn_exist,img,game}) {
-  const purchase=(name)=>{
-    console.log(name);
-=======
+
 import Btn from "./btn"
 import Msg from "./CoolPopup"
 import { useState , useEffect} from "react"
@@ -38,7 +33,6 @@ function Banner({header,title,btn_text,btn_exist,img,game,role}) {
       }
       const p = await game_to_cart.json();
       set_msg(p['msg'])
->>>>>>> Stashed changes
   }
   catch (error) {
     console.log(error)

@@ -3,12 +3,12 @@ import "./css/header.css"
 function Header() {
     const navigate=useNavigate()
     const location=useLocation()
-    console.log(location)
+    //console.log(location)
     function logOut()
     {
      localStorage.removeItem('Role')
      localStorage.removeItem('Email')
-     console.log( localStorage.getItem('Role'))
+     //console.log( localStorage.getItem('Role'))
      navigate('/Login')
     }
   return (

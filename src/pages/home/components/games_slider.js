@@ -1,7 +1,7 @@
 import Carousel from 'react-multi-carousel';
 import { useState , useEffect} from "react"
 import 'react-multi-carousel/lib/styles.css';
-import Card from "./Game_card"
+import Card from "../components/GameCard"
 const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -26,11 +26,8 @@ const responsive = {
     height:"400px",
     backgroundColor:"white"
   }
-<<<<<<< Updated upstream
-function Games_slider({games}) {
-=======
-function games_slider({games,role}) {
->>>>>>> Stashed changes
+
+function Games_slider({games,role}) {
   return (
     <div className="slider container">
         <h2 className="slider_title">TOP RATED GAMES</h2>
