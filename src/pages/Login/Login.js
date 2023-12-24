@@ -1,6 +1,7 @@
 import { React, useState, useRef } from "react"
 import { useNavigate  } from "react-router-dom";
 import '../Login/Login.css'
+import Navigate from "../../Componenet/ComNav/CommonNavigate";
 function Login() {
   let history=useNavigate ();
   const Email = useRef();
@@ -223,6 +224,7 @@ const banCreator=async()=>{
     }
   }
   return (
+
     <div className="LoginSignPage">
       <div>
 
@@ -250,6 +252,7 @@ const banCreator=async()=>{
       </div>
 
     </div>
+    
   );
 
 

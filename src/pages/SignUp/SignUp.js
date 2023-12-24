@@ -2,7 +2,7 @@
 import { useState, useRef } from "react"
 import ImageUploader from "../../Componenet/Image/image"
 import "./SignUp.css"
-import { useNavigate } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom"
 function SignUp() {
     const [valid, setValid] = useState('True')
     const [isPlayer, setIsPlayer] = useState(false)
@@ -221,6 +221,7 @@ function SignUp() {
                                     <input type="text" className="LoginSignupText" ref={Description} placeholder="Enter description" maxLength={200} />
                                 </div>
                                 <button className="SaveButton" onClick={CreatorSignUp} >Save</button>
+
                             </div>
                             : null}
 
@@ -230,6 +231,9 @@ function SignUp() {
                             <button className="LoginSignAsRole" onClick={CreatorHan} >Creator</button>
                             <button className="LoginSignAsRole" onClick={PlayerHan}>Player</button>
                         </div>
+                        <div  className="HaveAccount" >
+                        <Link to='/Login' className="LinkToLogin">Have an account</Link>
+</div>
                         {valid !== 'True' ? <p className="ErrorMessage">{valid}</p> : null}
                     </div>
                 }

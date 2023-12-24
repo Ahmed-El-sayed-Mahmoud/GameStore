@@ -7,6 +7,7 @@ import Home from"../src/pages/Home/home"
 import SignUp from './pages/SignUp/SignUp';
 import AddCompany from './pages/AddCompany/Company';
 import AddAdv from './pages/AddAd/Ad';
+import ShowCompany from './pages/ShowAllCompany/ShowCompany';
 function App() {
   console.log(localStorage.getItem("Email"))
   return (
@@ -17,9 +18,11 @@ function App() {
         </Route>
         <Route path='/Signup'element={<SignUp/>}>
         </Route>
-        <Route path='/CreateComapny'element={<AddCompany/>}>
+        <Route path='/CreateCompany'element={<AddCompany/>}>
         </Route>
         <Route path='/CreateAdv'element={<AddAdv/>}>
+        </Route>
+        <Route path='/ShowCompany'element={<ShowCompany/>}>
         </Route>
       </Routes>
     </BrowserRouter>

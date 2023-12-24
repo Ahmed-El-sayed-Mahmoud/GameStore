@@ -7,7 +7,6 @@
     border-radius: 13px;
     padding: 10rem 10rem 10rem 8rem;
     margin: 3rem 20rem 5rem 24rem;
-   
 }
 
 .EnterText {
@@ -22,8 +21,9 @@
 
 .LoginHeader {
     color: white;
-    margin-left: 4.5rem;
-    margin-bottom: 50px;
+   text-align: center; 
+   margin-left: 2rem; 
+   margin-bottom: 50px;
     margin-top: -20px;
     font-size: 2rem;
     font-family: 'Electrolize', sans-serif;

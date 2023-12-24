@@ -1,6 +1,8 @@
 import { useRef,useState,useEffect } from "react";
 import ImageUploader from "../../Componenet/Image/image";
 import '../AddCompany/company.css'
+import Navigate from "../../Componenet/ComNav/CommonNavigate";
+import { Descriptions } from "antd";
 function AddCompany(){
 const Name=useRef();
 const CLink=useRef();
@@ -8,6 +10,7 @@ const Description=useRef();
 const [Image,setImage]=useState('')
 const [Valid,setValid]=useState('True')
 const [email,setEmail]=useState('')
+const [Dec,setDec]=useState('')
 
 useEffect(()=>{
 setEmail((JSON.parse(localStorage.getItem('Email'))))
@@ -31,6 +34,10 @@ if(Image==='')
     setValid('Must Enter Company Logo');
     return false 
 }
+ let st=`${Description.current.value}`
+let re=st.replaceAll("'"," is ");
+setDec(re)
+console.log(Dec)
 return true
 }
 
@@ -38,7 +45,7 @@ return true
 const Add=async()=>{
  const valid=validation();
  console.log(email)
- console.log(Name.current.value)
+ console.log(Description.current.value)
  if(valid===true){
     try{
          const result=await fetch('http://localhost:3000/company/Add',{
@@ -50,7 +57,7 @@ const Add=async()=>{
                 Name:Name.current.value,
                 Logo:Image,
                 Link:CLink.current.value,
-                Description:Description.current.value,
+                Description:JSON.parse(JSON.stringify(Dec)),
                 AdminE:email
 
             })
@@ -74,6 +81,8 @@ const Add=async()=>{
  }
 }
 return(
+    <>
+    <Navigate/>
     <div className="AdCompanyContainer">
         <h1 className="AdCompany" >Create Company</h1>
         <div>
@@ -84,13 +93,14 @@ return(
             <input type="text" maxLength={200} ref={CLink}  placeholder="Enter Compnay Link" className="AdCompanyText" required></input>
         </div>
         <div>
-            <input type="text" maxLength={1000} ref={Description} placeholder="Enter Compnay Description" className="AdCompanyText" required ></input>
+            <textarea type="text" maxLength={1000} ref={Description} placeholder="Enter Compnay Description" className="AdCompanyText" style={{textWrap:"wrap",height:'50px',background:'#2b2b2b',color:'white',borderRadius:'1rem',paddingLeft:'1.5rem'}} ></textarea>
         </div>
         <div className="ButtonContAd">
         <button  className="AdCompanySave" onClick={Add}>Save</button>
         </div>
         {Valid !== 'True' ? <p className="ErrorMessageAD">{Valid}</p> : null}
     </div>
+    </>
 )
 
 
