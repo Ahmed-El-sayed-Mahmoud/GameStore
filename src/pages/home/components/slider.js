@@ -135,7 +135,7 @@ function Slider({games,role}) {
         set_index(newIndex);
       };
       const goToNext = useCallback(() => {
-        const isLastSlide = cur_index === games.length - 1;
+        const isLastSlide = cur_index === games?.length - 1;
         const newIndex = isLastSlide ? 0 : cur_index + 1;
         set_index(newIndex);
       }, [cur_index, games]);
@@ -184,7 +184,7 @@ function Slider({games,role}) {
         <h2 className="slider_title">GAMES ON TREND</h2>
       <div style={{width:"100%"}}>
         <div className="parent" style={parent_style()}>
-            {games.map((_,index)=>(
+            {games?.map((_,index)=>(
               <div className="slide" key={index} style={slide_style(index)}>
                 <div className="overlay">
                   <div style={{    height: "120px"}}>
@@ -212,7 +212,7 @@ function Slider({games,role}) {
                 ❱
             </div>
             <div style={dotsContainerStyles}>
-        {games.map((game, slideIndex) => (
+        {games?.map((game, slideIndex) => (
           <div
             style={dotStyle}
             key={slideIndex}

@@ -5,7 +5,7 @@ import Slider from "./components/slider"
 import Games_slider from "./components/games_slider"
 import Footer from "./components/Footer"
 import Msg from "./components/CoolPopup"
-/* const fetch_trend_game=async()=>{
+const fetch_trend_game=async()=>{
   const response = await fetch("http://localhost:3000/game/");
   const games = await response.json();
   return games[0];
@@ -33,10 +33,11 @@ return games
     let games;
     try{
       const response = await fetch("http://localhost:3000/game/TopRated");
-       games = await response.json();
-      if (!games.ok) {
+      if (!response.ok) {
       throw new Error(`HTTP error! Status: ${games.status}`);
+
     }
+    games = await response.json();
     
   }
   catch (Error) {
@@ -45,16 +46,18 @@ return games
 return games
   }
   const rated_games= await fetch_top_rated();
-  console.log(rated_games) */
+  console.log(rated_games)
 function Home() {
   
   return (
     <>
-      {/* <Header  role={localStorage.getItem("Role")}/>
+      <Header  role={localStorage.getItem("Role")}/>
       <Banner header={header} title="What are you waiting for !" img="./media/god_of_war.jpg" game={game} btn_exist={true} btn_text="Purchase Now" role={localStorage.getItem("Role")}/>
       <Slider games={sold_games} role={localStorage.getItem("Role")}/>
-      <Games_slider games={rated_games} role={localStorage.getItem("Role")}/>
-      <Footer/> */}
+    { rated_games!=undefined?
+    <Games_slider games={rated_games} role={localStorage.getItem("Role")}/>
+  :null}
+      <Footer/>
     </>
   );
 }

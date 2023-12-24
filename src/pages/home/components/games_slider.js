@@ -28,15 +28,19 @@ const responsive = {
   }
 
 function Games_slider({games,role}) {
+  console.log(games)
   return (
     <div className="slider container">
         <h2 className="slider_title">TOP RATED GAMES</h2>
         <div className='container'>
+
+          {
         <Carousel responsive={responsive}>
             {
-                games.map((game,index)=>(<Card game={game} key={index} role={role}/>))
+                games?.map((game,index)=>(<Card game={game} key={index} role={role}/>))
             }
-        </Carousel>
+            </Carousel>}
+        
         </div>
     </div>
     
