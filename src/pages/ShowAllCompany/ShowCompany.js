@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import Header from "../home/components/Header"
+import Header from "../home/components/header"
 import "./ShowCompany.css"
 function ShowCompany() {
 

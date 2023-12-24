@@ -1,11 +1,11 @@
 import "./home.css"
-import Header from "./components/Header"
-import Banner from "./components/Banner"
-import Slider from "./components/Slider"
-import Games_slider from "./components/Games_slider"
+import Header from "./components/header"
+import Banner from "./components/banner"
+import Slider from "./components/slider"
+import Games_slider from "./components/games_slider"
 import Footer from "./components/Footer"
 import Msg from "./components/CoolPopup"
-const fetch_trend_game=async()=>{
+/* const fetch_trend_game=async()=>{
   const response = await fetch("http://localhost:3000/game/");
   const games = await response.json();
   return games[0];
@@ -45,16 +45,16 @@ return games
 return games
   }
   const rated_games= await fetch_top_rated();
-  console.log(rated_games)
+  console.log(rated_games) */
 function Home() {
   
   return (
     <>
-      <Header  role={localStorage.getItem("Role")}/>
+      {/* <Header  role={localStorage.getItem("Role")}/>
       <Banner header={header} title="What are you waiting for !" img="./media/god_of_war.jpg" game={game} btn_exist={true} btn_text="Purchase Now" role={localStorage.getItem("Role")}/>
       <Slider games={sold_games} role={localStorage.getItem("Role")}/>
       <Games_slider games={rated_games} role={localStorage.getItem("Role")}/>
-      <Footer/>
+      <Footer/> */}
     </>
   );
 }
