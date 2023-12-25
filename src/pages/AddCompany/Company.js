@@ -19,6 +19,8 @@ console.log(email)
 
 
 function validation(){
+    if(Valid!=='True')
+    return false;
 if(Name.current.value==='')
 {
     setValid('Must Enter Company Name');
@@ -65,6 +67,7 @@ const Add=async()=>{
          if(!result.ok)
          {
             console.log('there is an error')
+            setValid('Image is large')
             return
          }
          const Compnay=await result.json();
@@ -74,6 +77,11 @@ const Add=async()=>{
             return;
           }
           setValid('Saved successfully ')
+          Name.current.value=''
+          Description.current.value=''
+          CLink.current.value=''
+          
+          
     }
     catch(err){
         console.log(err)

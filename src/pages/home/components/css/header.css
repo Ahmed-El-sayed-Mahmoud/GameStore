@@ -159,3 +159,8 @@ input:focus{
 .other li{
     font-size: 16px !important;
 }
+.LinkHome,.LinkHome:visited{
+    background-color: #19191d;
+    color: white;
+    text-decoration: none;
+}
