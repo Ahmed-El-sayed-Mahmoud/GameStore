@@ -2,6 +2,7 @@ import { useEffect ,useState} from "react";
 import { useLocation } from "react-router-dom";
 import './Ad.css'
 import Header from "../home/components/header";
+import CoolPopup from"../home/components/CoolPopup"
 function Ad(){
 const location=useLocation()
 const [AdName,setAdName]=useState('')
@@ -73,7 +74,7 @@ const watch=async()=>{
 
       const {hascoupon} =await ad.json()
       setMsg(hascoupon)
-      console.log(hascoupon)
+      console.log(msg)
 
     
   }
@@ -115,7 +116,7 @@ return(
     {localStorage.getItem('Role')==='Player'?
       <>
     <button onClick={watch} className="MarkButton"> Mark as watch</button>
-    <p className="msg">{msg}</p></>:null}
+  {msg!==''? <CoolPopup  message={msg}/>:null}</>:null}
 </div>
 </>
 )

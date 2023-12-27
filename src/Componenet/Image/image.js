@@ -11,6 +11,7 @@ const ImageUploader = ({ setvalid, setimage ,classN,divClass}) => {
                 reader.onloadend = () => {
                     // When the reader is done reading the file, set the base64 data to the state
                     setimage(reader.result);
+                    console.log(reader.result)
                 };
 
                 // Read the file as a data URL, which will convert the image to base64

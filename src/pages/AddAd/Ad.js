@@ -90,7 +90,7 @@ return(
         <div>
             <input type="text" maxLength={30} ref={Name} placeholder="Enter Advertise Name" className="AdCompanyText" required></input>
         </div>
-        <ImageUploader setvalid={setValid} setimage={setImage} classN='AdCompanyImage' />
+        <ImageUploader  setimage={setImage} classN='AdCompanyImage' />
         
         <div>
             <textarea type="text" maxLength={1000} ref={Description} placeholder="Enter Compnay Description" className="AdCompanyText" style={{textWrap:"wrap",height:'50px',background:'#2b2b2b',color:'white',borderRadius:'1rem',paddingLeft:'1.5rem'}} ></textarea>
