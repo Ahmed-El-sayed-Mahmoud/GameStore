@@ -1,12 +1,11 @@
-.Companys {
+.ComapnysOrAd {
     display: flex;
     flex-direction: column;
 }
 
 .AddComapnyContainer {
-    margin-top: 1rem;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    margin-left: 2.5rem;
     padding: 1rem;
     border: 1px solid black;
     width: fit-content;
@@ -25,6 +24,8 @@
     align-items: center;
     width: 100%;
     justify-content: center;
+    margin-top: 4rem;
+
 }
 
 .AddComapnyContainer:hover {
@@ -34,7 +35,7 @@
     /*right down z axis*/
 }
 
-.Company {
+.CompanyOrAdv {
     width: 20rem;
     height: 20rem;
     margin-bottom: 3rem;
@@ -45,25 +46,42 @@
     padding-top: 15px;
 }
 
-.CompanyLogo {
+.CompanyLogoorAdv {
     width: 100px;
     height: 100px;
     border-radius: 100px;
 }
-.CompanyName{
-    color:white;
+
+.CompanyNameOrAdv {
+    color: white;
     font-family: 'Sofia';
     font-style: italic;
     font-size: 1.6rem;
 
 }
-.CompanyLink,.CompanyLink:visited{
-    color: grey;
-    text-decoration:none;
-    font-family: 'Sofia';
-    font-size: 1.3rem;
 
+.CompanyLink,
+.CompanyLink:visited {
+    color: black;
+    text-decoration: none;
+    font-family: 'Sofia';
+    font-size: 1.4rem;
+    border: 1px solid white;
+    margin: 0 2.5rem 1rem 2.5rem;
+    border-radius: 2rem;
+    border-color: black;
+    background-color: white;
+    font-weight: 500;
 }
-.CompanyLink:hover{
-    color:white;
+
+.CompanyLink:hover {
+    color: white;
+    background-color: black;
+    border-color: white;
+}
+
+.CompanyLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }

@@ -8,6 +8,8 @@ import SignUp from './pages/SignUp/SignUp';
 import AddCompany from './pages/AddCompany/Company';
 import AddAdv from './pages/AddAd/Ad';
 import ShowCompany from './pages/ShowAllCompany/ShowCompany';
+import ShowAdv from './pages/ShowAdv/ShowAdv';
+import Ad from './pages/Ad/Ad';
 function App() {
   console.log(localStorage.getItem("Email"))
   return (
@@ -23,6 +25,10 @@ function App() {
         <Route path='/CreateAdv'element={<AddAdv/>}>
         </Route>
         <Route path='/ShowCompany'element={<ShowCompany/>}>
+        </Route>
+        <Route path='/ShowADv'element={<ShowAdv/>}>
+        </Route>
+        <Route path='/Ad'element={<Ad/>}>
         </Route>
       </Routes>
     </BrowserRouter>

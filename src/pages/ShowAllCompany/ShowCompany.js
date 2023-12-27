@@ -16,6 +16,7 @@ function ShowCompany() {
                 )
                 if (!result.ok) {
                     console.log(result.status)
+                    
                     return
                 }
                 const company = await result.json()
@@ -31,18 +32,21 @@ function ShowCompany() {
         getCompany()
     }, [companys])
     return (
-        <div className="Comapnys">
+        <div className="ComapnysOrAd">
             <Header />
             <Link to='/createcompany' style={{ textDecoration: 'none' }}><div className="AddComapnyContainer">Add Company</div></Link>
             <div className="CompanyContainer">
                 {companys?.map((company) => {
                     return (
-                        <div className="Company">
-                            <img src={company.Logo} className="CompanyLogo"/>
+                        <div className="CompanyOrAdv" key={company?.Name}>
+                            <img src={company.Logo} className="CompanyLogoorAdv"/>
 
-                            <h1 className="CompanyName">{company.Name}</h1>
-                            
-                            <a href={company.Link} target="_blank" className="CompanyLink">Visit The company page</a>
+                            <h1 className="CompanyNameOrAdv">{company.Name}</h1>
+                            <div className="CompanyLinks">
+                            <Link to={{pathname:"/CreateAdv",search:`${company?.Name}`}} className="CompanyLink">Add Advertise</Link>
+
+                            <a href={company.Link} target="_blank" className="CompanyLink" >Visit website</a>
+                       </div>
                         </div>
                     )
 

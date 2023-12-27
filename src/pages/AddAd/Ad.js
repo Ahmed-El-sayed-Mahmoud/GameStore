@@ -1,22 +1,27 @@
 import { useRef,useState,useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import ImageUploader from "../../Componenet/Image/image";
 import '../AddCompany/company.css'
 import Navigate from "../../Componenet/ComNav/CommonNavigate";
-function AddAdv({CompanyName}){
+function AddAdv(){
 const Name=useRef();
 const Description=useRef();
 const [Image,setImage]=useState('')
 const [Valid,setValid]=useState('True')
 const [email,setEmail]=useState('')
 const [Dec,setDec]=useState('')
-
+const location=useLocation()
+const [CompanyName,SetName]=useState('')
 useEffect(()=>{
 setEmail((JSON.parse(localStorage.getItem('Email'))))
-console.log(email)
-},[])
+SetName(location.search.substring(1,location.search.length))
+console.log(CompanyName)
+},[CompanyName])
 
 
 function validation(){
+    setValid('True')
+
 if(Name.current.value==='')
 {
     setValid('Must Enter Advertise Name');
@@ -50,7 +55,7 @@ const Add=async()=>{
                 Name:Name.current.value,
                 Image:Image,
                 Description:JSON.parse(JSON.stringify(Dec)),
-               CompanyName:CompanyName ,
+               CompanyName:CompanyName,
                 AdminE:email
 
             })
@@ -58,6 +63,8 @@ const Add=async()=>{
          if(!result.ok)
          {
             console.log('there is an error')
+            setValid('Image is large')
+
             return
          }
          const ad=await result.json();
@@ -71,6 +78,8 @@ const Add=async()=>{
     catch(err){
         console.log(err)
     }
+    Name.current.value=''
+    Description.current.value=''
  }
 }
 return(
