@@ -20,6 +20,8 @@ console.log(CompanyName)
 
 
 function validation(){
+    setValid('True')
+
 if(Name.current.value==='')
 {
     setValid('Must Enter Advertise Name');

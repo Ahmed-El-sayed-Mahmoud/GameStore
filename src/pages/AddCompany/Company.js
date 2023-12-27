@@ -19,8 +19,7 @@ console.log(email)
 
 
 function validation(){
-    if(Valid!=='True')
-    return false;
+    setValid('True')
 if(Name.current.value==='')
 {
     setValid('Must Enter Company Name');

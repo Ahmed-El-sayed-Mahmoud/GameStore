@@ -32,16 +32,16 @@ function ShowCompany() {
         getCompany()
     }, [companys])
     return (
-        <div className="Comapnys">
+        <div className="ComapnysOrAd">
             <Header />
             <Link to='/createcompany' style={{ textDecoration: 'none' }}><div className="AddComapnyContainer">Add Company</div></Link>
             <div className="CompanyContainer">
                 {companys?.map((company) => {
                     return (
-                        <div className="Company" key={company?.Name}>
-                            <img src={company.Logo} className="CompanyLogo"/>
+                        <div className="CompanyOrAdv" key={company?.Name}>
+                            <img src={company.Logo} className="CompanyLogoorAdv"/>
 
-                            <h1 className="CompanyName">{company.Name}</h1>
+                            <h1 className="CompanyNameOrAdv">{company.Name}</h1>
                             <div className="CompanyLinks">
                             <Link to={{pathname:"/CreateAdv",search:`${company?.Name}`}} className="CompanyLink">Add Advertise</Link>
 
