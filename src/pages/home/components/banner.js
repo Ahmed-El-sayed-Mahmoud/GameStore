@@ -52,7 +52,7 @@ function Banner({header,title,btn_text,btn_exist,img,game,role}) {
     <div className="offer">
         <div className="container">
             <div className="img">
-              <img src={img}/>
+              <img src={img} alt="" />
             </div>
             {show_msg&&<Msg message={msg}/>}
             <div className="text">

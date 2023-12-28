@@ -107,17 +107,13 @@ function Slider({games,role}) {
       set_show(true);
 }
   ///////////////////////////////////////////////////
-    const [container_size,set_cont_size]=useState(1170);
+    const [container_size,set_cont_size]=useState(.9*window.innerWidth);
     const [cur_index,set_index]=useState(0);
     const handleresize=function()
     {
-      if(window.innerWidth>1200)
-        set_cont_size(1170);
-      else if(window.innerWidth>992)
-        set_cont_size(970)
-      else if(window.innerWidth>768)
-        set_cont_size(750);
-      else
+      if(window.innerWidth<=768)
+      set_cont_size(window.innerWidth);
+    else
         set_cont_size(.9*window.innerWidth);
     }
     useEffect(()=>{
