@@ -1,5 +1,7 @@
 import { React, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import LOGO from "../media/logo.png"
+
 import "../Login/Login.css";
 import Navigate from "../../Componenet/ComNav/CommonNavigate";
 function Login() {
@@ -205,7 +207,7 @@ function Login() {
     <div className="LoginSignPage">
       <div>
         <div>
-          <img src="./media/logo.png" className="Loginlogo" />
+          <img src={LOGO} className="Loginlogo" />
         </div>
         <h1 className="LoginHeader">LOGIN</h1>
         <div className="EnterText">
