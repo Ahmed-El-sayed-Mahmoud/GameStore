@@ -1,0 +1,67 @@
+.GamesContainer {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.GameShow {
+
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    margin-top: 2rem;
+
+}
+
+.FirstSec {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.GameImage {
+    width: 16rem;
+    height: 15rem;
+    margin-right: 1rem;
+    border-radius: 1rem;
+}
+
+.GameInfo {
+    color: white;
+    font-family: 'charm', "Yuji Mai", sans-serif;
+    font-size: 1rem;
+}
+
+h1,
+h1:visited,
+h1:hover {
+    font-family: 'Electrolize', sans-serif;
+    color: white;
+}
+
+.GameButton {
+    justify-self: flex-end;
+    margin-right: 3rem;
+    align-self: first baseline;
+    margin-top: 3rem;
+
+}
+
+.Buttons {
+    padding: 1.5rem;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+}
+
+.Buttons:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.CreatorName,
+.CreatorName:visited {
+    color: white;
+}

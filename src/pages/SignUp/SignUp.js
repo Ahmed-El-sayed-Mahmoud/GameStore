@@ -2,6 +2,8 @@ import { useState, useRef } from "react";
 import ImageUploader from "../../Componenet/Image/image";
 import "./SignUp.css";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import LOGO from "../media/logo.png"
+
 function SignUp() {
   const [valid, setValid] = useState("True");
   const [isPlayer, setIsPlayer] = useState(false);
@@ -164,7 +166,7 @@ function SignUp() {
   return (
     <div className="LoginSignPage">
       <div>
-        <img src="./media/logo.png" className="Loginlogo" />
+        <img src={LOGO} className="Loginlogo" />
       </div>
       {localStorage.getItem("Role") === "Admin" ? (
         <h1 className="LoginHeader">Create Admin</h1>

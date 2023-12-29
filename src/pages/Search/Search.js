@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Header from "../home/components/Header";
+import Header from "../home/components/header";
 import "./Search.css";
 import { useParams } from "react-router-dom";
 import Card from "../home/components/GameCard";
