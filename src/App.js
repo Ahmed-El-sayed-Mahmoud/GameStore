@@ -3,7 +3,11 @@ import React from 'react';
 import Login from './pages/Login/Login';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+<<<<<<< Updated upstream
 import Home from "./pages/home/home";
+=======
+import Home from"../src/pages/home/home"
+>>>>>>> Stashed changes
 import SignUp from './pages/SignUp/SignUp';
 import AddCompany from './pages/AddCompany/Company';
 import AddAdv from './pages/AddAd/Ad';
