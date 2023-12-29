@@ -1,0 +1,36 @@
+/* ImprovedGameList.css */
+
+.game-list-container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #1c1c1c; /* Dark background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .game-list-container.deleted
+  {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color:brown;/* Dark background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .game-list-header {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff; /* Header text color */
+  }
+  
+  .game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    justify-content: center;
+  }
+  p{
+    color: white;
+  }
+  

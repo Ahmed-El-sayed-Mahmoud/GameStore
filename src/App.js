@@ -1,15 +1,19 @@
 import React, { useState , useEffect } from 'react';
-
+import Search from './pages/Search/Search'
 import Login from './pages/Login/Login';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home/home";
+import Home from"../src/pages/home/home"
 import SignUp from './pages/SignUp/SignUp';
 import AddCompany from './pages/AddCompany/Company';
 import AddAdv from './pages/AddAd/Ad';
 import ShowCompany from './pages/ShowAllCompany/ShowCompany';
 import ShowAdv from './pages/ShowAdv/ShowAdv';
 import Ad from './pages/Ad/Ad';
+import ShowGame from './pages/ShowGames/ShowGame';
+import Event from './pages/Event/event';
+import EventShow from './pages/EventShow/EventShow';
+import CreatorPage from './pages/CreatorPage/CreatorPage';
 import Banplayer from './pages/banplayer/Banplayer';
 import Bancreator from './pages/bancreator/Bancreator';
 import Createpost from './pages/CreatePost/Createpost';
@@ -60,7 +64,16 @@ function App() {
         </Route>
         <Route path='/ShowADv'element={<ShowAdv/>}>
         </Route>
-        <Route path='/Ad'element={<Ad/>}>
+        <Route path='/Ad'element={<Ad/>}></Route>
+        <Route path='/Search/:query?'element={<Search/>}>
+        </Route>
+        <Route path='/Games'element={<ShowGame/>}>
+        </Route>
+        <Route path='/Event'element={<Event/>}>
+        </Route>
+        <Route path='/ShowEvent'element={<EventShow/>}>
+        </Route>
+        <Route path='/CreatorPage'element={<CreatorPage/>}>
         </Route>
       </Routes>
     </BrowserRouter>
