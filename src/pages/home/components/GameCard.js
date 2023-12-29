@@ -39,13 +39,23 @@ function GameCard({game,role}) {
 }
   }
   const purchase=(name,op)=>{
-    if(role=="Player")
+    if(role==null)
+    {
+    window.location.href = "http://localhost:3003/Login";
+    }
+    else if(role=="Player")
     {
       add_to_cart(name,op);
       set_show(true);
     }
+    
   else
-      set_show(true);
+  {
+    set_msg(`You can not purchase this game as ${localStorage.getItem("Role")}`)
+    set_show(true);
+    
+  }
+      
 }
 
   ////////////////////////////////////////////////////////
@@ -68,9 +78,9 @@ function GameCard({game,role}) {
   }, [show_msg]);
   let sold_times="";
   if(game.totalNumberSales>10000)
-  sold_times="10000";
+  sold_times="10K";
 else if(game.totalNumberSales>1000)
-sold_times="1000";
+sold_times="1K";
 else if(game.totalNumberSales>100)
 sold_times="100";
 ////////////////////////////////////////////////////////////////////////////
@@ -86,7 +96,7 @@ sold_times="100";
         <div className="game_info">
             <p>{game.Name}</p>
             <div className="rating">
-                <Rate defaultValue={game.AVGRating} disabled={true} allowHalf={true} />
+                <Rate value={game.AVGRating} disabled={true} allowHalf={true} />
             </div>
             <div className="price">
                 <p className="dicount">+{game.MIN_AGE}</p>

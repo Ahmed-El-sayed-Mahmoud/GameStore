@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Search from './pages/Search/Search'
 import Login from './pages/Login/Login';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -30,9 +30,13 @@ function App() {
         </Route>
         <Route path='/ShowCompany'element={<ShowCompany/>}>
         </Route>
+<<<<<<< Updated upstream
         <Route path='/ShowADv'element={<ShowAdv/>}>
         </Route>
         <Route path='/Ad'element={<Ad/>}>
+=======
+        <Route path='/Search/:query?'element={<Search/>}>
+>>>>>>> Stashed changes
         </Route>
       </Routes>
     </BrowserRouter>
