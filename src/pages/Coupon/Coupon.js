@@ -4,7 +4,7 @@ import ImageUploader from "../../Componenet/Image/image";
 import '../AddCompany/company.css'
 import Navigate from "../../Componenet/ComNav/CommonNavigate";
 import { Descriptions } from "antd";
-function Event() {
+function Coupon() {
     const Name = useRef();
     const Max = useRef();
     const End = useRef();
@@ -92,28 +92,14 @@ console.log(location.search.substring(1,location.search.length))
             <Navigate />
             <div className="AdCompanyContainer">
                 <h1 className="AdCompany" >Create Event</h1>
-                <div>
-                    <input type="text" maxLength={100} ref={Name} placeholder="Enter Event Name" className="AdCompanyText" required></input>
-                </div>
-                <ImageUploader setvalid={setValid} setimage={setImage} classN='AdCompanyImage' />
-                <div>
+              <div>
                     <input type="number" maxLength={50} ref={Max} placeholder="Enter Event Max Partition" className="AdCompanyText" required></input>
                 </div>
-                <div>
-                    <input type="date" ref={End} placeholder="Enter Event End Date" className="AdCompanyText" ></input>
-                </div>
-                <div>
-                    <textarea type="text" maxLength={1000} ref={Description} placeholder="Enter Compnay Description" className="AdCompanyText" style={{ textWrap: "wrap", height: '50px', background: '#2b2b2b', color: 'white', borderRadius: '1rem', paddingLeft: '1.5rem' }} ></textarea>
-                </div>
-
-                <div className="ButtonContAd">
-                    <button className="AdCompanySave" onClick={Add}>Save</button>
-                </div>
-                {Valid !== 'True' ? <p className="ErrorMessageAD">{Valid}</p> : null}
+               
             </div>
         </>
     )
 
 
 }
-export default Event;
+export default Coupon;

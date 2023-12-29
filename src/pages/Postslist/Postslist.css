@@ -1,0 +1,48 @@
+/* Postslist.css */
+.post-list-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+  }
+  
+  .post-list-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: orangered;
+  }
+  
+  .post-item {
+    display: flex; 
+    align-items: center; 
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-image {
+    width: 150px; 
+    height: auto;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  
+  .post-details {
+    flex: 1; 
+    padding: 20px;
+  }
+  
+  .post-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .post-metadata {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
