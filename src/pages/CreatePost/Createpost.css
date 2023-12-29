@@ -1,0 +1,30 @@
+.article-editor {
+  color: white;
+  padding: 20px;
+  background-color:#1c1c1c;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.text-area {
+  width: 100%;
+  min-height: 100px;
+}
+
+.image-input {
+  width: 100%;
+}
+
+.preview {
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: red;
+}
+
+.preview-image {
+  max-width: 100%;
+}
