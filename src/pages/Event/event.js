@@ -103,7 +103,7 @@ console.log(location.search.substring(1,location.search.length))
                     <input type="date" ref={End} placeholder="Enter Event End Date" className="AdCompanyText" ></input>
                 </div>
                 <div>
-                    <textarea type="text" maxLength={100} ref={Description} placeholder="Enter Compnay Description" className="AdCompanyText" style={{ textWrap: "wrap", height: '50px', background: '#2b2b2b', color: 'white', borderRadius: '1rem', paddingLeft: '1.5rem' }} ></textarea>
+                    <textarea type="text" maxLength={1000} ref={Description} placeholder="Enter Compnay Description" className="AdCompanyText" style={{ textWrap: "wrap", height: '50px', background: '#2b2b2b', color: 'white', borderRadius: '1rem', paddingLeft: '1.5rem' }} ></textarea>
                 </div>
 
                 <div className="ButtonContAd">
