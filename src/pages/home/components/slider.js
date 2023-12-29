@@ -97,24 +97,37 @@ function Slider({games,role}) {
 }
   }
   const purchase=(name,op)=>{
-    if(role=="Player")
+    if(role==null)
     {
-      
+    window.location.href = "http://localhost:3003/Login";
+    }
+    else if(role=="Player")
+    {
       add_to_cart(name,op);
       set_show(true);
     }
+    
   else
-      set_show(true);
+  {
+    set_msg(`You can not purchase this game as ${localStorage.getItem("Role")}`)
+    set_show(true);
+    
+  }
+      
 }
   ///////////////////////////////////////////////////
-    const [container_size,set_cont_size]=useState(.9*window.innerWidth);
+    const [container_size,set_cont_size]=useState(.9*window.innerWidth-10);
     const [cur_index,set_index]=useState(0);
     const handleresize=function()
     {
-      if(window.innerWidth<=768)
+      if(window.innerWidth>=1200)
+      set_cont_size(.9*window.innerWidth)
+    else if(window.innerWidth>992)
+    set_cont_size(970)
+  else if(window.innerWidth>=768)
+  set_cont_size(750)
+      else if(window.innerWidth<=768)
       set_cont_size(window.innerWidth);
-    else
-        set_cont_size(.9*window.innerWidth);
     }
     useEffect(()=>{
       window.addEventListener('resize',handleresize);
@@ -149,7 +162,7 @@ function Slider({games,role}) {
         return () => clearTimeout(timerRef.current);
       }, [goToNext]);
       const slide_style=(slideIndex) => ({
-        /* backgroundImage: `url(${games[slideIndex].url})`, */
+        backgroundImage: `url(${games[slideIndex].image})`,
         width: `100%`,
         height:"100%",
         borderRadius: "10px",

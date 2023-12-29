@@ -38,27 +38,44 @@ function Banner({header,title,btn_text,btn_exist,img,game,role}) {
     console.log(error)
 }
   }
-  const purchase=(name)=>{
-    if(role=="Player")
-    {
-      add_to_cart(name);
+    const purchase=(name,op)=>{
+      if(role==null)
+      {
+      window.location.href = "http://localhost:3003/Login";
+      }
+      else if(role=="Player")
+      {
+        add_to_cart(name,op);
+        set_show(true);
+      }
       
+    else
+    {
+      set_msg(`You can not purchase this game as ${localStorage.getItem("Role")}`)
       set_show(true);
+      
     }
-  else
-      set_show(true);
+        
+}
+const s={
+  borderRadius: "10px",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundImage: `url(${game.image})`,
+  width:"90px",
+  height:"250px",
 }
   return (
     <div className="offer">
         <div className="container">
-            <div className="img">
-              <img src={img} alt="" />
+            <div className="img" style={s}>
+              
             </div>
             {show_msg&&<Msg message={msg}/>}
             <div className="text">
                 <h2>{header}</h2>
                 <p className="norm">{title}</p>
-                <button className="buy_now" onClick={()=>purchase(game.Name)}>Buy Now</button>
+                <button className="buy_now" onClick={()=>purchase(game.Name,1)}>Buy Now</button>
             </div>
         </div>
     </div>

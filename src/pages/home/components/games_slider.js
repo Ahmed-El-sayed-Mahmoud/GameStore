@@ -6,15 +6,15 @@ const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 6
+      items: 7
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4
+      items: 4.75
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 3
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -32,12 +32,12 @@ function Games_slider({games,role}) {
   return (
     <div className="slider container">
         <h2 className="slider_title">TOP RATED GAMES</h2>
-        <div className='container'>
+        <div>
 
           {
         <Carousel responsive={responsive}>
             {
-                games?.map((game,index)=>(<Card game={game} key={index} role={role}/>))
+                games?.map((game,index)=>(<Card game={game} key={index} role={role} buy="1"/>))
             }
             </Carousel>}
         

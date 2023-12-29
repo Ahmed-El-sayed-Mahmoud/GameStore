@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Header from "../home/components/Header";
+import Header from "../home/components/header";
 import "./Search.css";
 import { useParams } from "react-router-dom";
 import Card from "../home/components/GameCard";
@@ -179,7 +179,7 @@ const [expanded_ra,setExpanded_ra]=useState(false);
               gamesSearched.map((game, index) => {
                 return (
                   <div className="card_res" key={index}>
-                    <Card game={game} role={localStorage.getItem("Role")} />
+                    <Card game={game} role={localStorage.getItem("Role")} buy="1" />
                   </div>
                 );
               })}

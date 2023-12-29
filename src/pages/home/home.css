@@ -1,5 +1,5 @@
 body{
-    font-family: 'Electrolize', sans-serif;
+    font-family: 'Electrolize', sans-serif !important;
     
     background: rgba(0, 0, 0, 0.93);
     }

@@ -10,6 +10,8 @@ import AddAdv from './pages/AddAd/Ad';
 import ShowCompany from './pages/ShowAllCompany/ShowCompany';
 import ShowAdv from './pages/ShowAdv/ShowAdv';
 import Ad from './pages/Ad/Ad';
+import Cart from './pages/ViewCart/ViewCart'
+import Fav from "./pages/Fav/Fav"
 function App() {
   console.log(localStorage.getItem("Email"))
   return (
@@ -26,13 +28,11 @@ function App() {
         </Route>
         <Route path='/ShowCompany'element={<ShowCompany/>}>
         </Route>
-<<<<<<< Updated upstream
-        <Route path='/ShowADv'element={<ShowAdv/>}>
-        </Route>
-        <Route path='/Ad'element={<Ad/>}>
-=======
         <Route path='/Search/:query?'element={<Search/>}>
->>>>>>> Stashed changes
+        </Route>
+        <Route path='/MyCart'element={<Cart/>}>
+        </Route>
+        <Route path='/MyFav'element={<Fav/>}>
         </Route>
       </Routes>
     </BrowserRouter>

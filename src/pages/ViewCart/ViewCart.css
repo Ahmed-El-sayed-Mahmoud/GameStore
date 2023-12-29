@@ -1,0 +1,68 @@
+.title{
+    width: fit-content;
+    height: 51px;
+    background-color: #383838e0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+.cart_cont{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 10px 0;
+}
+.cart_game{
+    margin: 10px;
+    flex-basis: 20%;
+}
+.cart{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+.bill{
+    flex-basis: 30%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    height: fit-content;
+}
+.bill h2{
+    border-bottom: 1px solid #323232;
+    padding-bottom: 12px;
+}
+.bill .cont{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #323232;
+}
+.code{
+    width: 100%;
+}
+
+.cp{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.dis{
+    color: red;
+}
+.check{
+    color: white;
+    background-color: orange;
+    border: none;
+    padding: 5px;
+    width: 100%;
+    height: 37px;
+    font-size: 16px;
+    letter-spacing: 0px;
+    cursor: pointer;
+}
