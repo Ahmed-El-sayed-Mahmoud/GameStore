@@ -37,7 +37,8 @@
   .game-name {
     font-size: 1.2em;
     margin: 0;
-    color: #fff; /* Text color for game name */
+    color:blue; /* Text color for game name */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   .game-price {

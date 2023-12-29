@@ -12,7 +12,7 @@ const GameList = ({ games, title, onDelete ,onAddBack,deleted }) => {
   const handleAddBack = (name) => {
     onAddBack(name);
   };
-
+  console.log(games);
   return (
     <div className={`game-list-container ${deleted?'deleted': ''}`}>
       <h1 className="game-list-header">{title}</h1>

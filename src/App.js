@@ -19,6 +19,8 @@ import Bancreator from './pages/bancreator/Bancreator';
 import Createpost from './pages/CreatePost/Createpost';
 import Postslist from './pages/Postslist/Postslist'
 import Postpage from './pages/Postpage/Postpage';
+import ShowCreator from './pages/ShowCreator/ShowCreator';
+import GameProfile from './pages/GamePage/GameProfile';
 function App() {
   console.log(localStorage.getItem("Email"))
   const [posts,setPosts] = useState([])
@@ -74,6 +76,10 @@ function App() {
         <Route path='/ShowEvent'element={<EventShow/>}>
         </Route>
         <Route path='/CreatorPage'element={<CreatorPage/>}>
+        </Route>
+        <Route path='/gameProfile/:gameName'element={<GameProfile/>}>
+        </Route>
+        <Route path='/ShowCreator/:email'element={<ShowCreator/>}>
         </Route>
       </Routes>
     </BrowserRouter>
