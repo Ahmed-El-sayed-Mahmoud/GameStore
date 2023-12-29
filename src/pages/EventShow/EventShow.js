@@ -8,6 +8,7 @@ function EventShow() {
     const [Events, setEvents] = useState(null)
     const [date, setdate] = useState('')
     const [msg,setmsg]=useState('')
+    const[showmsg,setshow]=useState(false)
     useEffect(() => {
         setdate((new Date).toISOString().substring(0, 10))
         const getEvents = async () => {
@@ -29,6 +30,7 @@ function EventShow() {
     }, [Events])
 
 const participate=async(e)=>{
+    setshow(false)
 try{
 const result=await fetch('http://localhost:3000/Event/Part',{
     method:"POST",
@@ -46,17 +48,39 @@ if(!result.ok)
     return;
 }
 const parti=await result.json()
-console.log(parti)
 
-setmsg(parti)
+setmsg(parti['event'])
 console.log(msg)
-
+setshow(true)
 }
 catch(err){
     console.log(err)
 }
 }
-
+const Win=async(e)=>{
+    setshow(false)
+    try{
+    const result=await fetch('http://localhost:3000/Event/Win',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({Name:e})
+    })
+    if(!result.ok)
+    {
+        console.log(!result)
+        return;
+    }
+    const parti=await result.json()
+    
+    setmsg(parti['win'])
+    console.log(msg)
+    setshow(true)
+    }
+    catch(err){
+        console.log(err)
+    }
+    }
+    
 
     return (
         <>
@@ -81,12 +105,14 @@ catch(err){
 
                                 <div className="GameButton">
                                     {
-                                        localStorage.getItem('Role') === 'Player' && date <Event.EndDate.substring(0,10)?
-                                            <button className="Buttons" onClick={()=>participate(Event.EvName)}>Participate</button> : null
+                                        localStorage.getItem('Role') === 'Player' && date <Event.EndDate.substring(0,10)?<>
+                                            <button className="Buttons" onClick={()=>participate(Event.EvName)}>Participate</button>
+                                         {  showmsg===true? <CoolPopup message={msg} />:null}</>
+                                            : null
                                     }
                                     {
                                         date ===Event.EndDate.substring(0,10)?
-                                            <button className="Buttons" >Show Winner</button> : null
+                                            <button className="Buttons" onClick={()=>Win(Event.EvName)} >Show Winner</button> : null
                                     }
                                 </div>
                             </div>
