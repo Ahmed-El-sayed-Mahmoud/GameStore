@@ -1,0 +1,17 @@
+/* ImprovedGameList.css */
+
+
+
+.game-list-header {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff; /* Header text color */
+}
+
+.game-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  justify-content: center;
+}

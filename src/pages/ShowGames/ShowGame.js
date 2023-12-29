@@ -23,7 +23,7 @@ useEffect(()=>{
 console.log(Games)
 
 getGames()
-},[Games])
+},[])
 return(
 <>
 <Header/>
@@ -35,7 +35,7 @@ return(
                 <div className="FirstSec">
                 <img src={game.image} className="GameImage"/>
                 <div className="GameInfo">
-                <Link to={{pathname:'/',search:`${game.Name}`}} style={{textDecoration: 'none'}}><h1 >{game.Name}</h1></Link>
+                <Link to={`/gameProfile/${game.Name}`} style={{textDecoration: 'none'}}><h1 >{game.Name}</h1></Link>
                 <Link to={{pathname:'/',search:`${game.email}`}}style={{textDecoration: 'none'}}> <p className="CreatorName">Created By : {game.fname} {game.lname}</p></Link>
                 <p >Date : {game.rdate.substring(0,10)} </p>
                 <p >Price : {game.price}$ </p>

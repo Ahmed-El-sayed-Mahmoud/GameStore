@@ -14,6 +14,8 @@ import ShowGame from './pages/ShowGames/ShowGame';
 import Event from './pages/Event/event';
 import EventShow from './pages/EventShow/EventShow';
 import CreatorPage from './pages/CreatorPage/CreatorPage';
+import ShowCreator from './pages/ShowCreator/ShowCreator';
+import GameProfile from './pages/GamePage/GameProfile';
 function App() {
   console.log(localStorage.getItem("Email"))
   return (
@@ -42,6 +44,10 @@ function App() {
         <Route path='/ShowEvent'element={<EventShow/>}>
         </Route>
         <Route path='/CreatorPage'element={<CreatorPage/>}>
+        </Route>
+        <Route path='/gameProfile/:gameName'element={<GameProfile/>}>
+        </Route>
+        <Route path='/ShowCreator/:email'element={<ShowCreator/>}>
         </Route>
       </Routes>
     </BrowserRouter>

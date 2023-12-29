@@ -1,0 +1,63 @@
+/* GameProfile.css */
+
+  
+  .game-card {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .game-header {
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h1 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .star-rating {
+    color: #fdd835;
+    font-size: 20px;
+  }
+  
+  .game-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .game-details {
+    padding: 20px;
+  }
+  
+  .purchases,
+  .description,
+  .creator {
+    margin: 10px 0;
+    color: #666;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .loading {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+    color: #777;
+  }
+  

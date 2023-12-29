@@ -1,0 +1,43 @@
+/* GameDetailsSection.css */
+
+.game-details-section {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .tab-navigation {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  button.active {
+    color: #42a5f5;
+  }
+  
+  .description-section,
+  .reviews-section {
+    display: block;
+  }
+  
+  .description-section h3,
+  .reviews-section h3 {
+    color: #333;
+  }
+  
+  .description-section p {
+    color:white!important;
+  }
+  
+  /* Style the reviews section as needed */
+  
