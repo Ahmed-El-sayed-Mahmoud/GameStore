@@ -30,7 +30,10 @@ function Header() {
     function isLogin() {
         if (localStorage.getItem('Role') === null) {
             navigate('/SignUp')
-
+        }
+        else if(localStorage.getItem('Role') ==='Creator')
+        {
+            navigate(`/CreatorPage`)
         }
     }
     return (
