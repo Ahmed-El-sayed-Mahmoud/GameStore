@@ -23,6 +23,8 @@
     margin-left: 2rem;
     width: 10rem;
     margin-bottom: 2rem;
+background-color: white;
+color:black;
 }
 
 .MarkButton:hover {

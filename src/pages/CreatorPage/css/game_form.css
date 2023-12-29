@@ -1,0 +1,70 @@
+/* GameForm.css */
+
+.game-form-container {
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-header {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.error-message {
+  color: #ff0000;
+  margin-top: 5px;
+  font-size: 0.9em;
+}
+form-success-message,
+.form-error-message {
+  display: block;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.form-success-message {
+  background-color: #d4edda; /* Green background for success message */
+  color: #155724; /* Dark green text color for success message */
+}
+
+.form-error-message {
+  background-color: #f8d7da; /* Red background for error message */
+  color: #721c24; /* Dark red text color for error message */
+}
+
+/* Highlight the input border in case of an error */
+.input-error {
+  border-color: #ff0000;
+}
