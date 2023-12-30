@@ -12,8 +12,7 @@ const [description,setDescription]=useState(false)
 const [Cdescription,setCDescription]=useState(false)
 
 useEffect(()=>{
-    setAdName(location.search.substring(1,location.search.length))
-    console.log(AdName)
+    setAdName((location.search.substring(1,location.search.length)).replaceAll('%20',' '))
     },[])
 
 useEffect(()=>{

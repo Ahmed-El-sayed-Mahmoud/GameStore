@@ -117,13 +117,16 @@ function ViewCart() {
   const [coupon, set_cop] = useState([]);
   const[show_pop,set_pop]=useState(false);
   const[msg_cont,set_msg_cont]=useState("");
+  useEffect(()=>{
+    trials=[];
+    coupon_discount=0;
+  },[])
   const checkout=async ()=>{
+    console.log(real_coupons);
     const order = await create_order();
   const games_in_order = await create_order_game(order, cartGames,real_coupons);
-  console.log(games_in_order)
   if(games_in_order.success)
   {
-    console.log(11)
     set_msg_cont("Your Order has been Completed. Thanks for choosing GameVerse");
     set_pop(1);
     setCartGames([])
@@ -147,7 +150,6 @@ function ViewCart() {
         throw new Error(`HTTP error! Status: ${coupon.status}`);
       }
       const c = await coupon.json();
-      console.log(c[0])
      if(c.length==0)
      {
       set_c_msg("INVALID COUPON");
@@ -171,9 +173,11 @@ function ViewCart() {
   };
   const handleKeyDown=(event)=>{
     if (event.key === 'Enter') {
+      console.log(trials)
       if(trials.includes(code_entered.current.value))
       {
         set_c_msg("You have already entered this code")
+        set_show_msg(1)
       }
       else
       {
